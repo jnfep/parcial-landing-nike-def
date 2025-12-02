@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  overflow-x: hidden;
+  body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+}
+
+/* HERO */
+/* HERO */
+/* EL CONTENEDOR REAL DEL HERO */
+/* HERO como capa absoluta que NO empuja nada */
+#hero-section {
+  position: relative;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* wrapper del lottie: que NO empuje el HTML */
+#hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* CENTRA HORIZONTALMENTE */
+  position: relative;
+}
+
+.hero-wrapper {
+  width: 1920px;
+  height: auto !important;
+  margin: 0 auto;           /* CENTRA */
+  position: relative;
+}
+
+
+
+#hero-lottie {
+  width: 100%;
+  height: auto !important;
+}
+
+
+
+
+/* FONDO DEL HERO (COMO EN ILLUSTRATOR) */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1920px;         /* igual al diseño */
+  height: 1600px;        /* AJUSTA ESTE VALOR */
+  background: #D4111F;   /* ROJO OFICIAL */
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+
+/* BOTÓN */
+#buy-now-btn {
+  position: absolute;
+  top: 1300px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: #d4111f;
+  padding: 18px 45px;
+  border-radius: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 50;
+  border: none;
+  transition: 0.3s ease;
+}
+
+/* HOVER DEL BOTÓN */
+#buy-now-btn:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+
+/* Sección Air Technology */
+
+#air-tech {
+  position: absolute;
+  top: 1900px;  /* ALTURA exacta de donde termina el hero visible */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1920px;
+  z-index: 5;
+}
+
+.air-tech-container {
+  width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+}
+
+.air-text h2 {
+  font-size: 64px;
+  line-height: 1.1;
+  color: #D4111F;
+  margin-bottom: 40px;
+  font-family: montserrat, sans-serif;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.air-text p {
+  font-size: 28px;
+  line-height: 1.4;
+  color: #d4111f;
+  font-family: montserrat , sans-serif;
+}
+
+.air-img img {
+  width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+#shoe-info {
+  width: 1200px;
+  margin: 100px auto; /* lo baja naturalmente */
+  font-size: 20px;
+  line-height: 1.5;
+  color: white;  /* como en la imagen */
+  text-align: right; /* porque va a la derecha del zapato */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#shoe-info:hover {
+  opacity: 1;
+}
+
+#cards-overlay {
+  position: absolute;
+  top: 4400px;   /* AJUSTA este número hasta que queden exactamente donde quieres */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  z-index: 20; /* ENCIMA DEL JSON */
+}
+#cards-overlay .card {
+  width: 350px;
+  min-height: 420px; /* ← ESTO mantiene todas igual */
+  padding: 30px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Importante */
+  text-align: center;
+  font-family: montserrat;
+
+}
+
+#cards-overlay .card img {
+  width: 120px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  
+}
+/* Contenedor general detecta el hover */
+#cards-overlay:hover .card {
+  transform: scale(0.92);
+  transition: transform 0.3s ease;
+}
+
+/* La card que tiene el mouse encima */
+#cards-overlay .card:hover {
+  transform: scale(1.06);
+  z-index: 5; /* para que quede encima */
+}
+
+#model-section {
+  top: -4600px;  /* justo después del anterior */
+  position: relative;
+  width: 1920px;        /* igual que tu compo */
+  height: 5000px;        /* ajustamos según tu recorte */
+  margin: 0 auto;
+}
+
+/* Texto encima del JSON */
+.model-text {
+  position: absolute;
+  top: 120px;           /* ← mueve verticalmente */
+  left: 120px;          /* ← mueve horizontalmente */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  font-weight: 800;
+  color: #ffffff;          /* blanco como en el Hero */
+  pointer-events: none; /* no afecta hover del JSON */
+}
+.model-text {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  font-weight: 800;
+  color: #fff;
+  opacity: 0;                  /* oculto al inicio */
+  transform: translateY(20px); /* un poco abajo */
+  transition: all .4s ease;    /* animación suave */
+}
+#model-section:hover .model-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#clean-design {
+  position: relative;
+  width: 100%;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.clean-container {
+  top: -8000px;  /* AJUSTA este valor */
+  width: 1920px;  /* igual al tamaño de la compo */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 200px;
+}
+
+.clean-text h2 {
+  font-size: 72px;
+  font-weight: 500;
+  color: #1d1d2c;
+  line-height: 1.2;
+  font-family: montserrat;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* ESTADO INICIAL */
+.clean-text,
+.clean-img img {
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(6px);
+  transition: all 0.55s cubic-bezier(.23,1,.32,1); /* movimiento premium */
+}
+
+#clean-design:hover .clean-text,
+#clean-design:hover .clean-img img {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+#clean-design:hover .clean-text {
+  transition-delay: 0s;           /* texto primero */
+}
+
+#clean-design:hover .clean-img img {
+  transition-delay: 0.18s;        /* zapato después */
+}
+#clean-design:hover .clean-img img {
+  transform: translateY(0) scale(1.02);
+}
+
+#motion-section {
+  position: relative;
+  width: 100%;
+  height: 900px; /* ajustamos si necesitas */
+}
+
+#motion-overlay {
+  width: 1920px;
+  position: absolute;
+  top: 9000px;  /* AJUSTA este valor */ 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;   /* <-- Esto los pone uno debajo del otro */
+  align-items: center;
+
+}
+
+.motion-text {
+  color: white;
+  font-family: montserrat;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.motion-btn {
+  background: white;
+  color: #111;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 28px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: 0.25s ease;
+}
+
+.motion-btn:hover {
+  transform: scale(1.06);
+}
+
+.motion-logo {
+  
+  width: 70px;
+  opacity: 0.9;
+  margin-top: 100px;
+}
+
